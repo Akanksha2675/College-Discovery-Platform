@@ -2,7 +2,7 @@
 
 > Transform your documents, expertise and ideas into videos, posts, content calendars and multi-platform publishing — automatically.
 
-🔗 **Live Demo:** [share-on-website.vercel.app](https://share-on-website.vercel.app)
+🔗 **Live Demo:** [share-on-website.vercel.app](https://share-on-website.vercel.app/)
 
 ---
 
