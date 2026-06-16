@@ -1,85 +1,150 @@
-# ShareOn — AI Personal Branding Agent
+# CollegeFind — College Discovery Platform
 
-> Transform your documents, expertise and ideas into videos, posts, content calendars and multi-platform publishing — automatically.
+> **Find, compare, and discuss colleges — all in one place.**
 
-🔗 **Live Demo:** [share-on-website.vercel.app](https://share-on-website.vercel.app/)
-
----
-
-## What is ShareOn?
-
-ShareOn is an AI-powered personal branding platform built for solopreneurs, founders, coaches, consultants, agencies and creators. It acts as your always-on branding agent — turning your knowledge and ideas into polished content across every major platform, without the manual effort.
-
-**Vision:** Become the operating system for personal branding and creator-led growth.
+Live demo: [college-discovery-platform-u82r.vercel.app](https://college-discovery-platform-u82r.vercel.app/)
 
 ---
 
-## Key Features
+## Overview
 
-- **Knowledge Base Upload** — Feed ShareOn your documents, decks and expertise
-- **Brand Voice AI** — Trains on your style to generate content that sounds like *you*
-- **Document to Video** — Converts your content into AI-generated videos using HeyGen & ElevenLabs
-- **Avatar Studio** — Create and manage your AI video avatar
-- **Content Calendar** — Plan, schedule and manage your content pipeline
-- **Multi-Platform Publishing** — Publish directly to LinkedIn, YouTube, TikTok, Instagram and X
-- **Analytics Dashboard** — Track performance and growth across all platforms
-- **Billing & Plans** — Spark, Creator and Pro subscription tiers
+**CollegeFind** is a web application that helps students discover and evaluate top Indian colleges. It provides rich college profiles, side-by-side comparisons, and a community-driven Q&A forum — making the college selection process informed, interactive, and stress-free.
 
 ---
 
-## User Journey
+## Features
 
-```
-Signup → Knowledge Upload → Brand Training → Content Generation → Video Creation → Publishing → Analytics
-```
+### 🔍 Explore Colleges
+- Browse **8+ universities** across India (IITs, NITs, BITS, VIT, DTU, IIIT, and more)
+- Filter by **location** (Maharashtra, Delhi, Tamil Nadu, Rajasthan, Telangana)
+- Sort by **Top Rated**, **Fees: Low to High**, or **Fees: High to Low**
+- Search by **program stream** — Engineering, Business, Medical, Computer Science, Law
+
+### 🏫 College Detail Pages
+Each college page includes:
+- Star rating and location
+- Annual fee and average placement package
+- Courses offered (B.Tech, M.Tech, MBA, PhD)
+- Top recruiters
+- Overview / about section
+- Linked Q&A threads from the community
+
+### ⚖️ Compare Colleges
+- Add any college to a comparison list via the **"Add to Compare"** button on detail pages
+- Navigate to `/compare` to view colleges side by side
+
+### 💬 Community Discussions
+- Ask questions tied to a specific college
+- Browse and filter questions by institution
+- Reply to existing threads
+- Real student experiences shared (e.g., hostel life, placements, departments)
+
+---
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — featured colleges, search, and filters |
+| `/colleges/:id` | Individual college detail page |
+| `/compare` | Side-by-side college comparison |
+| `/discussions` | Community Q&A forum |
+
+---
+
+## Colleges Listed
+
+| College | Location | Annual Fees | Avg Package | Rating |
+|---|---|---|---|---|
+| IIT Madras | Chennai, Tamil Nadu | ₹2.5L | ₹22.0L | ⭐ 4.9 |
+| IIT Bombay | Mumbai, Maharashtra | ₹2.5L | ₹21.0L | ⭐ 4.8 |
+| IIT Delhi | New Delhi, Delhi | ₹2.4L | ₹20.0L | ⭐ 4.7 |
+| BITS Pilani | Pilani, Rajasthan | ₹5.2L | ₹18.0L | ⭐ 4.6 |
+| NIT Trichy | Tiruchirappalli, Tamil Nadu | ₹1.5L | ₹12.0L | ⭐ 4.5 |
+| IIIT Hyderabad | Hyderabad, Telangana | ₹3.2L | ₹16.0L | ⭐ 4.4 |
+| DTU Delhi | New Delhi, Delhi | ₹1.7L | ₹11.0L | ⭐ 4.2 |
+| VIT Vellore | Vellore, Tamil Nadu | ₹3.8L | ₹9.0L | ⭐ 4.1 |
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Frontend | Next.js, Tailwind CSS, Framer Motion |
-| Backend | Node.js, REST APIs, JWT + RBAC |
-| Database | Supabase |
-| Auth | Supabase Auth |
-| AI & Video | OpenAI, HeyGen, ElevenLabs |
-| Publishing | LinkedIn, YouTube, TikTok, Meta, X APIs |
-| Deployment | Vercel, CDN delivery |
+- **Framework:** Next.js (React)
+- **Deployment:** Vercel
+- **Styling:** Tailwind CSS (inferred from class structure)
+- **Routing:** Next.js App Router (`/colleges/[id]`, `/compare`, `/discussions`)
 
 ---
 
-## Who Is It For?
+## Getting Started
 
-| Persona | Use Case |
-|---|---|
-| 🚀 Founders | Build thought leadership without hiring a content team |
-| 🎓 Coaches & Educators | Repurpose expertise into courses, posts and videos |
-| 💼 Consultants | Establish authority and attract inbound clients |
-| 📣 Agencies | Manage personal brands for multiple clients at scale |
-| ✍️ Creators | Automate content workflows and grow faster |
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/college-discovery-platform.git
+cd college-discovery-platform
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+### Deploy to Vercel
+
+```bash
+npx vercel
+```
 
 ---
 
-## Pricing Plans
+## Project Structure
 
-- **Spark** — Get started with AI-powered content creation
-- **Creator** — Full content calendar, video creation and publishing
-- **Pro** — Advanced analytics, multi-platform and agency features
+```
+college-discovery-platform/
+├── app/
+│   ├── page.tsx              # Home / Explore page
+│   ├── colleges/
+│   │   └── [id]/
+│   │       └── page.tsx      # College detail page
+│   ├── compare/
+│   │   └── page.tsx          # Compare colleges page
+│   └── discussions/
+│       └── page.tsx          # Community Q&A page
+├── components/               # Reusable UI components
+├── public/                   # Static assets
+└── README.md
+```
 
 ---
 
-## Roadmap
+## Contributing
 
-- ✅ MVP — Core auth, knowledge base, brand voice, content generation
-- 🔄 Growth — Video creation, avatar studio, publishing integrations
-- 🔜 Scale — Advanced analytics, team collaboration, agency dashboard
-- 🔮 Enterprise — Custom integrations, white-labelling, dedicated support
+Contributions are welcome! To get started:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
 
 ---
 
-## Built With ❤️ by Akanksha
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 CollegeFind. All rights reserved.
